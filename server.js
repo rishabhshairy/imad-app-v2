@@ -6,7 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleOne={
+var articles={
+articleOne:{
     title: 'Rishabh Shairy Article one',
     heading:'Article one',
     date:'4-feb-2017',
@@ -19,6 +20,40 @@ var articleOne={
             </p>`
 
     
+},
+articleTwo:{
+    title: 'Rishabh Shairy Article two',
+    heading:'Article two',
+    date:'05-feb-2017',
+    content:` <p>
+                hey guyz this is my new website ........
+            </p>
+            <p>
+                learning server side javascript and linking websites through IMAD
+                
+            </p>
+            <p>
+                this is second article page guyzz....
+            </p>
+ `
+},
+articleThree:{title: 'Rishabh Shairy Article three',
+    heading:'Article three',
+    date:'1-feb-2017',
+    content:`<p>
+                hey guyz this is my new website ........
+            </p>
+            <p>
+                learning server side javascript and linking websites through IMAD
+                
+            </p>
+            <p>
+                this is module  p4...
+                article  page three
+                
+            </p>
+            `
+}
 };
 function createTemp(data){
 var title=data.title;
@@ -74,7 +109,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','article-one.html'));
+    res.send(createTemp(articleOne));
 });
 
 app.get('/article-two',function(req,res){
