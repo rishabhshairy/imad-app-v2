@@ -1,6 +1,8 @@
 console.log('Loaded!');
-//move the image
-var imgObj=document.getElementById('new');
-imgObj.onClick = function() {
-  img.style.marginLeft='200px';
+var img = document.getElementById('new');
+img.onClick = function() {
+  
+  img.style.marginLeft='100px';
+
+    
 };
