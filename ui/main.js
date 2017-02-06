@@ -1,2 +1,2 @@
 console.log('Loaded!');
-alert("Enter your name to Continue");
+alert('Enter your name to Continue');
