@@ -11,7 +11,8 @@ var articles={
     title:'Rishabh Shairy Article one',
     heading:'Article one',
     date:'4-feb-2017',
-    content:`<p>
+    content:`<img src="ui/WP_20160106_15_41_13_Pro.jpg">
+                <p>
                 hey guyz this is my new website ........
             </p>
             <p>
@@ -124,6 +125,11 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/cube.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'cube.png'));
 });
+
+app.get('/ui/WP_20160106_15_41_13_Pro.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'WP_20160106_15_41_13_Pro.jpg'));
+});
+
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
