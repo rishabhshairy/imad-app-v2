@@ -126,8 +126,8 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-app.get('/ui/cube.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'cube.png'));
+app.get('/ui/madi.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
 app.get('/ui/WP_20160106_15_41_13_Pro.jpg', function (req, res) {
