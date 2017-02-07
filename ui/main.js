@@ -18,7 +18,7 @@ button.onclick = function() {
    }
       
   };
-  httpRequest.send('GET','http://rishabhshairy.imad.hasura-app.io',true);
+  httpRequest.open('GET','http://rishabhshairy.imad.hasura-app.io',true);
   httpRequest.send(null);
   
 };
