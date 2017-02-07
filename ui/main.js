@@ -17,7 +17,7 @@ button.onclick = function() {
    }
       
   };
-  httpRequest.open('GET','http://rishabhshairy.imad.hasura-app.io',true);
+  httpRequest.open('GET','http://rishabhshairy.imad.hasura-app.io/counter',true);
   httpRequest.send(null);
   
 };
