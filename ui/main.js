@@ -24,6 +24,7 @@
 			  
 			};
 			
+		    //names code
 			var submit=document.getElementById('subtn');
 			submit.onclick=function() {
 			
@@ -31,10 +32,12 @@
  				var request=new XMLHttpRequest();
 			  	
 			  
-			  
+			  //capturing response
 			  request.onreadystatechange=function(){
 			    if(request.readyState===XMLHttpRequest.DONE){
+				    
 				    if(request.status===200){
+				        
 				        var names=request.responseText;
 				        names=JSON.parse(names);
                             var list='';
