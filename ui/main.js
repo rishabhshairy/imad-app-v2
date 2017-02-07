@@ -20,6 +20,6 @@
 			  };
 			    request.open('GET','http://rishabhshairy.imad.hasura-app.io/counter',true);
 			   
-			      request.send(); 
+			      request.send(null); 
 			  
 			};
