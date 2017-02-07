@@ -105,7 +105,7 @@ var htmlTemplate=`
 `;
 
     return htmlTemplate;
-};
+}
 
 var names=[];
 app.get('/submit-name/:names',function(req,res){
