@@ -106,6 +106,7 @@ var htmlTemplate=`
 
     return htmlTemplate;
 }
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -116,7 +117,11 @@ app.get('/:articleName',function(req,res){
     
 });
 
-
+var counter=0;
+app.get('/counter' , function (req, res) {
+  counter=counter+1;
+  res.send(counter.toString());
+});
 
 
 app.get('/ui/style.css', function (req, res) {
@@ -135,11 +140,7 @@ app.get('/ui/WP_20160106_15_41_13_Pro.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'WP_20160106_15_41_13_Pro.jpg'));
 });
 
-var counter=0;
-app.get('/counter' , function (req, res) {
-  counter=counter+1;
-  res.send(counter.toString());
-});
+
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
