@@ -107,6 +107,12 @@ var htmlTemplate=`
     return htmlTemplate;
 };
 
+var names=[];
+app.get('/submit-name/:names',function(req,res){
+	var name=req.params.name;
+	names.push(name);
+	res.send(JSON.stringify(names));
+});
 
 var counter=0;
 app.get('/counter' , function (req, res) {
