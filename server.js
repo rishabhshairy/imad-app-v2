@@ -38,7 +38,8 @@ var articles={
             </p>
  `
 },
-    'article-three':{title: 'Rishabh Shairy Article three',
+    'article-three':{
+    title: 'Rishabh Shairy Article three',
     heading:'Article three',
     date:'1-feb-2017',
     content:`<p>
@@ -56,7 +57,7 @@ var articles={
             `
 }
 };
-function createTemp(data){
+function createTemplate(data){
 var title = data.title;
 var heading=data.heading;
 var date=data.date;
@@ -111,7 +112,7 @@ app.get('/', function (req, res) {
 
 app.get('/:articleName',function(req,res){
     var articleName = req.params.articleName;
-    res.send(createTemp(articles[articleName]));
+    res.send(createTemplate(articles[articleName]));
     
 });
 
