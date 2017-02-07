@@ -58,8 +58,3 @@
 			      request.send(null); 
 			  
 			};
-
-
-			
-				
-			};
