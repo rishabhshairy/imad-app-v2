@@ -136,7 +136,7 @@ app.get('/ui/WP_20160106_15_41_13_Pro.jpg', function (req, res) {
 });
 
 var counter=0;
-app.get('/counter', function (req, res) {
+app.get('/counter' , function (req, res) {
   counter=counter+1;
   res.send(counter.toString());
 });
