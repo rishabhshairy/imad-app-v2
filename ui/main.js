@@ -28,16 +28,20 @@
 			
 				//making request to server
  				var request=new XMLHttpRequest();
-			  
+			  	var names=["name1","name2","name3","name4"];
+				var list='';
+				for(var i=0;i<names.length;i++)
+				{
+					list+= '<li>' + names + '</li>';
+				}
+				var ul=document.getElementById('namelist');
+				ul.innerHTML=list;
 			  
 			  
 			  request.onreadystatechange=function(){
 			    if(request.readyState===XMLHttpRequest.DONE){
 				    if(request.status===200){
-				            var counter=request.responseText;
-				   
-				            var span=document.getElementById('count');
-				            span.innerHTML=counter.toString();
+				            
 				 }
 			   }
 			      
@@ -53,13 +57,6 @@
 
 
 				//capture the respone and store in variable
-				var names=["name1","name2","name3","name4"];
-				var list='';
-				for(var i=0;i<names.length;i++)
-				{
-					list+= '<li>' + names + '</li>';
-				}
-				var ul=document.getElementById('namelist');
-				ul.innerHTML=list;
+			
 				
 			};
