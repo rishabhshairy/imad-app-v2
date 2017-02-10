@@ -11,7 +11,7 @@ var articles={
     title:'Rishabh Shairy Article one',
     heading:'Article one',
     date:'4-feb-2017',
-    content:`<img src="ui/WP_20160106_15_41_13_Pro.jpg">
+    content:`
                 <p>
                 hey guyz this is my new website ........
             </p>
@@ -19,12 +19,14 @@ var articles={
                 learning server side javascript and linking websites through IMAD
                 
             </p>
+            <hr/>
+            <div> 
             <input type="text" name="comments" id="comm"></input>
             <input type="submit" name="Comment" id="combtn"></input>
             <ul id="clist">
                 
             </ul>
-
+            </div>
             `
 
     
