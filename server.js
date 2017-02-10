@@ -18,7 +18,14 @@ var articles={
             <p>
                 learning server side javascript and linking websites through IMAD
                 
-            </p>`
+            </p>
+            <input type="text" name="comments" id="comm"></input>
+            <input type="submit" name="Comment" id="combtn"></input>
+            <ul id="clist">
+                
+            </ul>
+
+            `
 
     
 },
@@ -115,19 +122,12 @@ app.get('/submit-name',function(req,res){
 	res.send(JSON.stringify(names));
 });
 
+
 var counter=0;
 app.get('/counter' , function (req, res) {
   counter=counter+1;
   res.send(counter.toString());
 });
-
-var names=[];
-app.get('/submit-name',function(req,res){
-	var name=req.query.name;
-	names.push(name);
-	res.send(JSON.stringify(name));
-});
-
 
 
 app.get('/', function (req, res) {
