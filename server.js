@@ -21,6 +21,7 @@ var articles={
             </p>
             <hr/>
             <div> 
+            <p>Leave your Comments here</p>
             <input type="text" name="comments" id="comm"></input>
             <input type="submit" name="Comment" id="combtn"></input>
             <ul id="clist">
