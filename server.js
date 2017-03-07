@@ -104,7 +104,7 @@ app.post('/create-user',function(req,res){
    //username,password
     //JSON "username":rishabh;"password"="qwerty"
    var username=req.body.username;
-   var passsword=req.body.password;
+   var password=req.body.password;
    
    var salt=crypto.randomBytes(128).toString('hex');
    var dbString=hash(input,salt);
